@@ -1,6 +1,10 @@
+package ru.casinoTests.bonuses;
+
+import ru.casinoTests.BaseUITest;
 import org.junit.jupiter.api.Test;
 
-    public class CheckingBonusSelectionPersonalAccountTest extends BaseUITest{
+
+    public class CheckingBonusSelectionPersonalAccountTest extends BaseUITest {
 
         @Test
         public void checkingBonusesSwitcher(){

@@ -1,6 +1,9 @@
+package ru.casinoTests.turnaments;
+
+import ru.casinoTests.BaseUITest;
 import org.junit.jupiter.api.Test;
 
-public class CheckTournamentsTest extends BaseUITest{
+public class CheckTournamentsTest extends BaseUITest {
 
     @Test
     public void checkTournaments() {

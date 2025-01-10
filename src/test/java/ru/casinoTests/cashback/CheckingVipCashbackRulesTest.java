@@ -1,3 +1,6 @@
+package ru.casinoTests.cashback;
+
+import ru.casinoTests.BaseUITest;
 import org.junit.jupiter.api.Test;
 
 public class CheckingVipCashbackRulesTest extends BaseUITest {
