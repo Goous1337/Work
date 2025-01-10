@@ -1,5 +1,6 @@
 package ru.casinoTests.bonuses;
 
+import org.example.pages.PersonalAccountPage;
 import ru.casinoTests.BaseUITest;
 import org.junit.jupiter.api.Test;
 
@@ -8,6 +9,9 @@ import org.junit.jupiter.api.Test;
 
         @Test
         public void checkingBonusesSwitcher(){
+
+            PersonalAccountPage personalAccountPage = new PersonalAccountPage();
+
             baseRouter.mainPage()
                     .clickLoginButton()
                     .senKeysEmailOrIdInputField("1099464403")
@@ -18,6 +22,7 @@ import org.junit.jupiter.api.Test;
                     .clickBonusesOrDepositButton()
                     .clickBonusesSwitcherGiftButton()
                     .clickBonusesSwitcherButton()
-                    .clickBonusGiftRulesButton();
+                    .clickBonusGiftRulesButton()
+                    .verifyModalWindowRulesBonusesOrGiftText();
         }
 }
