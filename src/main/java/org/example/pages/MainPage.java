@@ -12,13 +12,10 @@ public class MainPage {
     private final SelenideElement categoryCasinoButton = $x("//a[@href='/ru/slots']");
     private final SelenideElement categoryPromoButton = $x("//a[@href='/ru/bonus/rules']");
     private final SelenideElement registrationButton = $x("//a[@href='/ru/registration']");
-    private final SelenideElement loginButton = $x("//span[@class='ui-button__container']//span[contains(@class, 'caption__label')" +
-            " and text()='Вход']");
+    private final SelenideElement loginButton = $x("//span[@class='ui-button__container']/span[text()='Вход']");
     private final SelenideElement emailOrIDInputField = $x("//input[@id='username']");
     private final SelenideElement passwordInputField = $x("//input[@id='username-password']");
-    private final SelenideElement submitButton = $x("//button[contains(@class, 'auth-form-fields__submit')" +
-            " and .//span[contains(@class, 'caption__label')" +
-            " and text()='Войти']]");
+    private final SelenideElement submitButton = $x("//span[@class='ui-button__container']/span[text()='Войти']");
 
 
     @Step("Нажать на кнопку 'Войти'")

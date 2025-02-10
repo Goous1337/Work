@@ -12,25 +12,20 @@ public class PromoPage {
     private final SelenideElement categoryBonusesContendTournamentsButton =$x("//span[contains(@class, 'caption__label') and text()='Турниры']");
     private final SelenideElement categoryBonusesContendPromotionsButton =$x("//span[contains(@class, 'caption__label') and text()='Бонусы']");
     private final SelenideElement spinOfThronesThree =$x("//a[contains(@class, 'bonuses-preview-tournament') and contains(@href, '/ru/bonus/casino/tournaments/412')]");
-    private final SelenideElement bonusWelcomePackageButton = $x("//a[@class='bonuses-preview-bonus bonuses-preview-bonus--theme-dark bonus-tournaments-list__block'" +
-            " and @title='Приветственный пакет до 1500 USD + 210 FS']//span[@class='caption__label' and text()='Узнать больше']");
-    private final SelenideElement bonusLoyaltyWorthWeighGoldButton = $x("//a[@class='bonuses-preview-bonus bonuses-preview-bonus--theme-dark bonus-tournaments-list__block'" +
-            " and @title='ЛОЯЛЬНОСТЬ НА ВЕС ЗОЛОТА']//span[@class='caption__label' and text()='Узнать больше']");
-    private final SelenideElement bonusVipCashbackButton = $x("//a[@class='bonuses-preview-bonus bonuses-preview-bonus--theme-dark bonus-tournaments-list__block'" +
-            " and @title='VIP кешбэк казино']//span[@class='caption__label' and text()='Узнать больше']");
-    private final SelenideElement bonusBigGameButton =$x("//a[@class='bonuses-preview-bonus bonuses-preview-bonus--theme-dark bonus-tournaments-list__block' " +
-            "and @title='Большая игра ']//span[@class='caption__label' and text()='Узнать больше']");
+    private final SelenideElement bonusWelcomePackageButton = $x("//a[@href='/ru/bonus/casino/promotions/slot_first_deposit']");
+    private final SelenideElement bonusLoyaltyWorthWeighGoldButton = $x("//a[@href='/ru/bonus/casino/promotions/slot_ten_deposit']");
+    private final SelenideElement bonusVipCashbackButton = $x("//a[@href='/ru/bonus/casino/promotions/vip_cashback']");
+    private final SelenideElement bonusBigGameButton =$x("//a[@href='/ru/bonus/casino/promotions/big_play_day']");
     private final SelenideElement returnPromotionsBonusesButton =$x("//span[@class='ui-caption--size-s ui-caption ui-breadcrumbs-point__label'" +
             " and text()='Акции и бонусы']");
+    private final SelenideElement hedderCasinoButton =$x("//label[@class='ui-switch--is-active ui-switch--theme-default ui-switch ui-switches-item__switch ui-switches-item-switch']//span[text()='Казино']");
     private final SelenideElement returnTournamentButton =$x("//a[.//span[contains(@class, 'casino-header-breadcrumbs__label') and text()='Турниры']]");
-    private final SelenideElement bonusDealOfDayButton =$x("//a[@class='bonuses-preview-bonus bonuses-preview-bonus--theme-dark bonus-tournaments-list__block'" +
-            " and @title='Сделка дня']//span[@class='caption__label' and text()='Узнать больше']");
+    private final SelenideElement bonusDealOfDayButton =$x("//a[@href='/ru/bonus/casino/promotions/deal_of_the_day']");
     private final SelenideElement bonusFridayBustButton =$x("//a[@class='bonuses-preview-bonus bonuses-preview-bonus--theme-dark bonus-tournaments-list__block'" +
             " and @title='Пятничный буст']//span[@class='caption__label' and text()='Узнать больше']");
     private final SelenideElement bonusWildHuntSpinButton = $x("//a[@class='bonuses-preview-bonus bonuses-preview-bonus--theme-dark bonus-tournaments-list__block'" +
             " and @title='Дикая охота за спинами']//span[@class='caption__label' and text()='Узнать больше']");
-    private final SelenideElement bonusJackysBetButton =$x("//a[@href='/ru/bonus/rules/jackys_bet'" +
-            " and @class='bonuses-preview-bonus bonuses-preview-bonus--theme-dark bonus-tournaments-list__block']");
+    private final SelenideElement bonusJackysBetButton =$x("//a[@href='/ru/bonus/casino/promotions/jackys_bet']");
     private final SelenideElement tournamentFestiveUtopiaButton =$x("//a[.//span[contains(@class, 'bonuses-preview-tournament__text')" +
             " and text()='ПРАЗДНИЧНАЯ УТОПИЯ']]");
     private final SelenideElement tournamentChristmasBellsFestivalButton =$x("//a[.//span[contains(@class, 'bonuses-preview-tournament__text')" +
@@ -73,6 +68,16 @@ public class PromoPage {
              "and text()='РАДОСТНЫЙ ПРАЗДНИК']]");
      private final SelenideElement tournamentIceFestivalButton =$x("//a[.//span[contains(@class, 'bonuses-preview-tournament__text')" +
              "and text()='ЛЕДЯНОЙ ФЕСТИВАЛЬ']]");
+
+
+     public PromoPage clickHederCasinoButton() {
+         hedderCasinoButton
+                 .hover()
+                 .shouldBe(Condition.appear)
+                 .shouldBe(Condition.exist)
+                 .click();
+         return this;
+     }
 
 
      @Step("Нажимаем на турниры 'ЛЕДЯНОЙ ФЕСТИВАЛЬ'")
